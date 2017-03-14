@@ -5,9 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require( 'path' );
 const srcDir = path.resolve( __dirname, '../src' );
+const buildDir =  path.resolve( __dirname, '../build/prod' );
+const outputFileName = 'app.js';
 
-
-// Use ExtractTextPlugin to extracs SASS to separate file.
+// Use ExtractTextPlugin to extract SASS to separate file.
 const extractSass = new ExtractTextPlugin( {
 	filename: 'style.css'
 } );
@@ -15,8 +16,8 @@ const extractSass = new ExtractTextPlugin( {
 module.exports = ( env ) => ( {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve( __dirname, '../production' ),
-		filename: 'app.js'
+		path: buildDir,
+		filename: outputFileName
 	},
 	module: {
 		rules: [

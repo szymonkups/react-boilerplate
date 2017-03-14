@@ -1,9 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require( 'path' );
-const buildDir =  path.resolve( __dirname, '../build' );
-const outputFileName = 'app.js';
 const srcDir = path.resolve( __dirname, '../src' );
+const buildDir =  path.resolve( __dirname, '../build/dev' );
+const outputFileName = 'app.js';
 
 module.exports = ( env ) => ( {
 	entry: './src/index.js',

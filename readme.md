@@ -14,6 +14,8 @@ TODO:
  * Jest testing
  * Loading resources: images, svg etc.
  * Linting/hinting
+ * Create common webpack configuration.
+ * Minimize CSS for production.
  
 ## Usage
 Clone repository and install dependencies:
@@ -28,12 +30,12 @@ npm start
 Starts webpack-dev-server.
 ___
 ```
-npm run build
+npm run dev
 ```
-Bulds project in development mode under `build/` directory. JavaScript and CSS are bundled into one file.
+Bulds project in development mode under `build/dev/` directory. JavaScript and CSS are bundled into one file.
 ___
 ```
-npm run production
+npm run prod
 ```
-Builds project for production under `production/` directory. JavaScript is minimized, CSS is extracted to separate file to speed up loading.
+Builds project for production under `build/prod/` directory. JavaScript is minimized, CSS is extracted to separate file to speed up loading.
 
