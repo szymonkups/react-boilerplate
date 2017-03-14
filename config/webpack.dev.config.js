@@ -6,6 +6,12 @@ module.exports = ( env ) => ( {
 		path: path.resolve( __dirname, '../build' ),
 		filename: 'app.js'
 	},
+	devtool: 'inline-source-map',
+	devServer: {
+		contentBase: path.join( __dirname, '../build' ),
+		compress: true,
+		port: 9000
+	},
 	module: {
 		rules: [
 			// JavaScript files.

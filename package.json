@@ -4,6 +4,7 @@
   "description": "Yet another boilerplate for React.js.",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --env=dev --open",
     "build": "webpack --env=dev --progress",
     "production": "webpack --env=prod --progress"
   },
@@ -25,7 +26,8 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
     "uglifyjs-webpack-plugin": "^0.3.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "react": "^15.4.2",
