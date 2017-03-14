@@ -7,12 +7,13 @@ Includes:
  * React and JSX
  * SASS loading
  * Separate dev and production builds
+ * Automatically creates correct `index.html` file from template.
 
 TODO: 
- * Automatically create correct `index.html` file from template.
  * React hot module replacement
  * Jest testing
  * Loading resources: images, svg etc.
+ * Linting/hinting
  
 ## Usage
 Clone repository and install dependencies:

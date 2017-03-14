@@ -1,7 +1,11 @@
-const path = require( 'path' );
+const webpack = require( 'webpack' );
 const UglifyJSPlugin = require( 'uglifyjs-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-const webpack = require( 'webpack' );
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const path = require( 'path' );
+const srcDir = path.resolve( __dirname, '../src' );
+
 
 // Use ExtractTextPlugin to extracs SASS to separate file.
 const extractSass = new ExtractTextPlugin( {
@@ -47,6 +51,12 @@ module.exports = ( env ) => ( {
 			comments: false,
 		} ),
 
-		extractSass
+		// Extract SASS to separate file.
+		extractSass,
+
+		// Create index.html.
+		new HtmlWebpackPlugin( {
+			template: path.join( srcDir, 'index.html' )
+		} )
 	]
 } );

@@ -1,14 +1,19 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const path = require( 'path' );
+const buildDir =  path.resolve( __dirname, '../build' );
+const outputFileName = 'app.js';
+const srcDir = path.resolve( __dirname, '../src' );
 
 module.exports = ( env ) => ( {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve( __dirname, '../build' ),
-		filename: 'app.js'
+		path: buildDir,
+		filename: outputFileName
 	},
 	devtool: 'inline-source-map',
 	devServer: {
-		contentBase: path.join( __dirname, '../build' ),
+		contentBase: buildDir,
 		compress: true,
 		port: 9000
 	},
@@ -30,5 +35,11 @@ module.exports = ( env ) => ( {
 				]
 			}
 		]
-	}
+	},
+	plugins: [
+		// Create index.html.
+		new HtmlWebpackPlugin( {
+			template: path.join( srcDir, 'index.html' )
+		} )
+	]
 } );
