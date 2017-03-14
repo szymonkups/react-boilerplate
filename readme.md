@@ -9,6 +9,7 @@ Includes:
  * Separate dev and production builds
 
 TODO: 
+ * Automatically create correct `index.html` file from template.
  * React hot module replacement
  * Jest testing
  * Loading resources: images, svg etc.
