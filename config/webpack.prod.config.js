@@ -56,7 +56,10 @@ module.exports = ( config ) => {
 
 			// Create index.html.
 			new HtmlWebpackPlugin( {
-				template: path.resolve( config.sourcePath, config.htmlTemplate )
+				template: path.resolve( config.sourcePath, config.htmlTemplate ),
+				minify: {
+					collapseWhitespace: true
+				}
 			} )
 		]
 	}
