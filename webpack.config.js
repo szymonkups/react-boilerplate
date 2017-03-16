@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 // Project paths configuration.
 const commonConfig = {
 	// Path to app sources.
