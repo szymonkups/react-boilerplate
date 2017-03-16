@@ -5,7 +5,7 @@ Yet another React boilerplate.
  * Webpack 2.0, webpack-dev-server
  * React and JSX
  * Testing with Jest, code coverage
- * SASS loading, separate CSS file for production
+ * SASS loading, separate minimized CSS file for production
  * Separate dev and production builds
  * Automatically creates correct `index.html` file from template.
 
@@ -13,7 +13,6 @@ TODO:
  * React hot module replacement
  * Loading resources: images, svg etc.
  * Linting/hinting.
- * Minimize CSS for production.
  * Redux.
  * React router, ( `v3` vs `v4` )
  

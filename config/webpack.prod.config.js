@@ -12,7 +12,7 @@ module.exports = ( config ) => {
 	} );
 
 	return {
-		entry: path.resolve(config.sourcePath, config.startPoint),
+		entry: path.resolve( config.sourcePath, config.startPoint ),
 		output: {
 			path: config.prodPath,
 			filename: config.output
@@ -28,10 +28,10 @@ module.exports = ( config ) => {
 				// SASS files.
 				{
 					test: /\.scss$/,
-					use: extractSass.extract({
+					use: extractSass.extract( {
 						use: [
-							{loader: 'css-loader'},
-							{loader: 'sass-loader'}
+							{ loader: 'css-loader', options: { minimize: true } },
+							{ loader: 'sass-loader' }
 						],
 						fallback: 'style-loader'
 					})
@@ -40,23 +40,23 @@ module.exports = ( config ) => {
 		},
 		plugins: [
 			// Adding proper env variable.
-			new webpack.DefinePlugin({
-				'process.env.NODE_ENV': JSON.stringify('production')
-			}),
+			new webpack.DefinePlugin( {
+				'process.env.NODE_ENV': JSON.stringify( 'production' )
+			} ),
 
 			// Uglify JavaScript files.
-			new UglifyJSPlugin({
+			new UglifyJSPlugin( {
 				beautify: false,
 				comments: false,
-			}),
+			 }),
 
 			// Extract SASS to separate file.
 			extractSass,
 
 			// Create index.html.
-			new HtmlWebpackPlugin({
-				template: path.resolve(config.sourcePath, config.htmlTemplate)
-			})
+			new HtmlWebpackPlugin( {
+				template: path.resolve( config.sourcePath, config.htmlTemplate )
+			} )
 		]
 	}
 };
