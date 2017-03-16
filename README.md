@@ -1,8 +1,7 @@
 # React boilerplate
 Yet another React boilerplate.
 
-## Uses
-Includes:
+## Includes
  * Webpack 2.0, webpack-dev-server
  * React and JSX
  * Testing with Jest, code coverage
@@ -13,10 +12,9 @@ Includes:
 TODO: 
  * React hot module replacement
  * Loading resources: images, svg etc.
- * Linting/hinting
- * Create common webpack configuration
- * Minimize CSS for production
- * Redux
+ * Linting/hinting.
+ * Minimize CSS for production.
+ * Redux.
  * React router, ( `v3` vs `v4` )
  
 ## Usage
