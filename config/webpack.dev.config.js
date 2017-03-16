@@ -1,7 +1,8 @@
 // Webpack configuration for development environment.
+/* eslint-env node */
 
 const path = require( 'path' );
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 
 module.exports = ( config ) => ( {
 	entry: path.resolve( config.sourcePath, config.startPoint ),

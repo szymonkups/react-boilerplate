@@ -1,10 +1,11 @@
 // Webpack configuration for production environment.
+/* eslint-env node */
 
 const path = require( 'path' );
 const webpack = require( 'webpack' );
 const UglifyJSPlugin = require( 'uglifyjs-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 
 module.exports = ( config ) => {
 	const extractSass = new ExtractTextPlugin( {
@@ -34,7 +35,7 @@ module.exports = ( config ) => {
 							{ loader: 'sass-loader' }
 						],
 						fallback: 'style-loader'
-					})
+					} )
 				}
 			]
 		},
@@ -48,7 +49,7 @@ module.exports = ( config ) => {
 			new UglifyJSPlugin( {
 				beautify: false,
 				comments: false,
-			 }),
+			} ),
 
 			// Extract SASS to separate file.
 			extractSass,

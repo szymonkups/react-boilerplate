@@ -7,7 +7,8 @@ Yet another React boilerplate.
  * Testing with Jest, code coverage
  * SASS loading, separate minimized CSS file for production
  * Separate dev and production builds
- * Automatically creates correct `index.html` file from template.
+ * Automatically creates correct `index.html` file from template
+ * ESLint checking
 
 TODO: 
  * React hot module replacement
@@ -48,3 +49,8 @@ ___
 npm run coverage
 ```
 Starts tests with code coverage.
+___
+```
+npm run lint
+```
+Runs linting using [ESLint](http://eslint.org)
