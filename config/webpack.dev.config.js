@@ -7,14 +7,16 @@ const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 module.exports = ( config ) => ( {
 	entry: path.resolve( config.sourcePath, config.startPoint ),
 	output: {
-		path: config.devPath,
-		filename: config.output
+		path: path.resolve( __dirname, config.devPath ),
+		filename: config.output,
+		publicPath: '/'
 	},
 	devtool: 'inline-source-map',
 	devServer: {
 		contentBase: config.devPath,
 		compress: true,
-		port: 9000
+		port: 9000,
+		historyApiFallback: true
 	},
 	module: {
 		rules: [

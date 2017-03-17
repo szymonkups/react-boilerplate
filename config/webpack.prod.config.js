@@ -16,7 +16,8 @@ module.exports = ( config ) => {
 		entry: path.resolve( config.sourcePath, config.startPoint ),
 		output: {
 			path: config.prodPath,
-			filename: config.output
+			filename: config.output,
+			publicPath: '/'
 		},
 		module: {
 			rules: [
