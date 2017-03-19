@@ -3,18 +3,26 @@
 
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const webpack = require( 'webpack' );
 
 module.exports = ( config ) => ( {
-	entry: path.resolve( config.sourcePath, config.startPoint ),
+	entry: [
+		'react-hot-loader/patch',
+		'webpack-dev-server/client?http://localhost:9000',
+		'webpack/hot/only-dev-server',
+
+		path.resolve( config.sourcePath, config.startPoint )
+	],
 	output: {
-		path: path.resolve( __dirname, config.devPath ),
+		path:  path.resolve( __dirname, '..', config.devPath ),
 		filename: config.output,
 		publicPath: '/'
 	},
+
 	devtool: 'inline-source-map',
 	devServer: {
+		hot: true,
 		contentBase: config.devPath,
-		compress: true,
 		port: 9000,
 		historyApiFallback: true
 	},
@@ -41,6 +49,8 @@ module.exports = ( config ) => ( {
 		// Create index.html.
 		new HtmlWebpackPlugin( {
 			template: path.resolve( config.sourcePath, config.htmlTemplate )
-		} )
+		} ),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NamedModulesPlugin(),
 	]
 } );

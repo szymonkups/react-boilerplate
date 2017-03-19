@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../Header';
 import Navigation from '../Navigation';
 import Home from '../Home';
-import About from '../About';
 import NotFound from '../NotFound';
+import { About } from '../About';
 import './style.scss';
 
 export default () => (
@@ -15,7 +15,7 @@ export default () => (
 				<Navigation />
 				<Switch>
 					<Route exact path="/" component={ Home } />
-					<Route exact path="/about" render={ About } />
+					<Route exact path="/about" component={ About } />
 					<Route render={ NotFound } />
 				</Switch>
 			</div>

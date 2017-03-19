@@ -2,17 +2,18 @@
 Yet another React boilerplate.
 
 ## Includes
- * Webpack 2.0, webpack-dev-server
  * React and JSX
+ * Webpack 2.0
+ * React hot module replacement
  * React router v4
- * Testing with Jest, code coverage
- * SASS loading, separate minimized CSS file for production
+ * Testing using Jest with code coverage
+ * SASS loading
  * Separate dev and production builds
+ * Separate minimized CSS file for production
  * Automatically creates correct `index.html` file from template
  * ESLint checking
 
-TODO: 
- * React hot module replacement
+TODO:
  * Loading resources: images, svg etc.
  * Redux
  
