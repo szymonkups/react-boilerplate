@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env=dev",
-    "dev": "webpack --env=dev --progress",
-    "prod": "webpack --env=prod --progress",
+    "production": "webpack --env=prod --progress",
     "test": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint src/ test/"

@@ -9,7 +9,7 @@ const commonConfig = {
 	startPoint: 'index.js',
 
 	// Location where to store production build.
-	prodPath: './build/prod/',
+	prodPath: './build/production/',
 
 	// Location where to store development build.
 	devPath: './build/dev/',
