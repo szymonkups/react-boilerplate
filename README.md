@@ -16,6 +16,7 @@ Yet another React boilerplate.
 TODO:
  * Loading resources: images, svg etc.
  * Redux
+ * Redux Saga / Thunk
  
 ## Usage
 Clone repository and install dependencies:
