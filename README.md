@@ -6,6 +6,7 @@ Yet another React boilerplate.
  * Webpack 2.0
  * React hot module replacement
  * React router v4
+ * Redux
  * Testing using Jest with code coverage
  * SASS loading
  * Separate dev and production builds
@@ -15,9 +16,8 @@ Yet another React boilerplate.
 
 TODO:
  * Loading resources: images, svg etc.
- * Redux
  * Redux Saga / Thunk
- 
+
 ## Usage
 Clone repository and install dependencies:
 ```

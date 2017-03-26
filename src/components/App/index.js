@@ -4,7 +4,7 @@ import Header from '../Header';
 import Navigation from '../Navigation';
 import Home from '../Home';
 import NotFound from '../NotFound';
-import { About } from '../About';
+import About from '../About';
 import './style.scss';
 
 export default () => (

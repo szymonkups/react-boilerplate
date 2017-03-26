@@ -1,28 +1,31 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { increment as incrementValueActionCreator } from '../../actions/value';
 
 class About extends React.Component {
 	constructor() {
 		super();
-
-		this.state = { counter: 0 };
-		this.onClick = this.onClick.bind( this );
-	}
-
-	onClick() {
-		this.setState( ( prev, props ) => ( {
-			counter: prev.counter + 1
-		} ) );
 	}
 
 	render() {
 		return (
 			<div>
 				<h2>About</h2>
-				<p>Current state is { this.state.counter }</p>
-				<button onClick={ this.onClick }>Increment</button>
+				<p>Current value is { this.props.value }.</p>
+				<button onClick={ this.props.increment }>Increment</button>
 			</div>
 		);
 	}
 }
 
-export { About };
+const mapStateToProps = ( state ) => ( {
+	value: state.value
+} );
+
+const mapDispatchToProps = ( dispatch ) => ( {
+	increment: bindActionCreators( incrementValueActionCreator, dispatch )
+} );
+
+
+export default connect( mapStateToProps, mapDispatchToProps )( About );
