@@ -14,7 +14,7 @@ module.exports = ( config ) => ( {
 		path.resolve( config.sourcePath, config.startPoint )
 	],
 	output: {
-		path:  path.resolve( __dirname, '..', config.devPath ),
+		path: path.resolve( __dirname, '..', config.devPath ),
 		filename: config.output,
 		publicPath: '/'
 	},
