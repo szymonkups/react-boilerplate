@@ -41,11 +41,6 @@ module.exports = ( config ) => {
 			]
 		},
 		plugins: [
-			// Adding proper env variable.
-			new webpack.DefinePlugin( {
-				'process.env.NODE_ENV': JSON.stringify( 'production' )
-			} ),
-
 			// Uglify JavaScript files.
 			new UglifyJSPlugin( {
 				beautify: false,

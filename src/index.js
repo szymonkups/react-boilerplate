@@ -1,9 +1,11 @@
+/* globals module */
+import 'babel-polyfill';
 import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { createSagaMiddleware } from 'redux-saga';
+import createSagaMiddleware from 'redux-saga';
 import App from './components/App';
 import rootReducer from './reducers';
 import rootSaga from './sagas';
@@ -32,8 +34,8 @@ const render = ( Component ) => {
 render( App );
 
 // Hot Module Replacement API
-if ( window.module.hot ) {
-	window.module.hot.accept( './components/App', () => {
+if ( module.hot ) {
+	module.hot.accept( './components/App', () => {
 		render( App )
 	} );
 }

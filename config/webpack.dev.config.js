@@ -7,6 +7,7 @@ const webpack = require( 'webpack' );
 
 module.exports = ( config ) => ( {
 	entry: [
+		'babel-polyfill',
 		'react-hot-loader/patch',
 		'webpack-dev-server/client?http://localhost:9000',
 		'webpack/hot/only-dev-server',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { increment as incrementValueActionCreator } from '../../actions/value';
+import { incrementAsync as incrementAsyncActionCreator } from '../../actions/value';
 
 class About extends React.Component {
 	constructor() {
@@ -24,7 +24,7 @@ const mapStateToProps = ( state ) => ( {
 } );
 
 const mapDispatchToProps = ( dispatch ) => ( {
-	increment: bindActionCreators( incrementValueActionCreator, dispatch )
+	increment: bindActionCreators( incrementAsyncActionCreator, dispatch )
 } );
 
 

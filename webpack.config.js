@@ -24,5 +24,7 @@ const commonConfig = {
 	htmlTemplate: 'index.html'
 };
 
+const env = process.env.NODE_ENV == 'production' ? 'prod' : 'dev';
+
 // Export correct configuration file.
-module.exports = env => require( `./config/webpack.${ env }.config.js` )( commonConfig );
+module.exports = require( `./config/webpack.${ env }.config.js` )( commonConfig );

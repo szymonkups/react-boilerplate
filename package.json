@@ -4,8 +4,8 @@
   "description": "Yet another boilerplate for React.js.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env=dev",
-    "production": "webpack --env=prod --progress",
+    "start": "webpack-dev-server",
+    "production": "NODE_ENV=production webpack --progress",
     "test": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint src/ test/"
@@ -36,6 +36,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
