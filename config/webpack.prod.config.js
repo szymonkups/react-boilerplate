@@ -15,7 +15,7 @@ module.exports = ( config ) => {
 	return {
 		entry: path.resolve( config.sourcePath, config.startPoint ),
 		output: {
-			path:  path.resolve( __dirname, '..', config.prodPath ),
+			path: path.resolve( __dirname, '..', config.prodPath ),
 			filename: config.output,
 			publicPath: '/'
 		},
@@ -37,10 +37,25 @@ module.exports = ( config ) => {
 						],
 						fallback: 'style-loader'
 					} )
+				},
+
+				// Image files.
+				{
+					test: /\.(jpg|png|svg)$/,
+					loader: 'file-loader',
+					options: {
+						name: './assets/images/[hash].[ext]'
+					},
 				}
 			]
 		},
 		plugins: [
+			new webpack.DefinePlugin( {
+				'process.env': {
+					'NODE_ENV': JSON.stringify( 'production' )
+				}
+			} ),
+
 			// Uglify JavaScript files.
 			new UglifyJSPlugin( {
 				beautify: false,

@@ -14,9 +14,9 @@ Yet another React boilerplate.
  * Separate minimized CSS file for production
  * Automatically creates correct `index.html` file from template
  * ESLint checking
+ * Image loading
 
 TODO:
- * Loading resources: images, svg etc.
  * Add sample tests for everything in `src/`
 
 ## Usage

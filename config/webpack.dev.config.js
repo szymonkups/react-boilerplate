@@ -43,6 +43,15 @@ module.exports = ( config ) => ( {
 					{ loader: 'css-loader' },
 					{ loader: 'sass-loader' }
 				]
+			},
+
+			// Image files.
+			{
+				test: /\.(jpg|png|svg)$/,
+				loader: 'url-loader',
+				options: {
+					limit: 25000,
+				},
 			}
 		]
 	},
