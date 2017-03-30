@@ -7,5 +7,9 @@ export default function value( state, action ) {
 		return ++state;
 	}
 
+	if ( action.type === 'DECREMENT_VALUE' ) {
+		return --state;
+	}
+
 	return state;
 }

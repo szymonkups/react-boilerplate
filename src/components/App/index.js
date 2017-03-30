@@ -4,7 +4,7 @@ import Header from '../Header';
 import Navigation from '../Navigation';
 import Home from '../Home';
 import NotFound from '../NotFound';
-import About from '../About';
+import Actions from '../Actions';
 import './style.scss';
 
 export default () => (
@@ -15,7 +15,7 @@ export default () => (
 				<Navigation />
 				<Switch>
 					<Route exact path="/" component={ Home } />
-					<Route exact path="/about" component={ About } />
+					<Route exact path="/actions" component={ Actions } />
 					<Route render={ NotFound } />
 				</Switch>
 			</div>
