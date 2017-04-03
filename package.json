@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "production": "NODE_ENV=production webpack --progress",
-    "test": "jest",
+    "test": "jest --watchAll",
     "coverage": "jest --coverage",
     "lint": "eslint src/ test/"
   },
